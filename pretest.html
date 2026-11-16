@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الاختبار القبلي</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header><div class="logo">🕵️ المحقق اللغوي</div></header>
+
+<main>
+<div class="container">
+
+    <div class="progress"><div style="width:28%"></div></div>
+
+    <h1>اختبر معلوماتك</h1>
+    <p>اختر صواب أو خطأ أمام كل عبارة.</p>
+
+    <div class="question" data-correct="خطأ">
+        <h3>١- كلمة «يقرأ» اسم.</h3>
+        <div class="options">
+            <button data-answer="صواب" onclick="selectAnswer(this)">صواب</button>
+            <button data-answer="خطأ" onclick="selectAnswer(this)">خطأ</button>
+        </div>
+    </div>
+
+    <div class="question" data-correct="صواب">
+        <h3>٢- كلمة «قلم» اسم.</h3>
+        <div class="options">
+            <button data-answer="صواب" onclick="selectAnswer(this)">صواب</button>
+            <button data-answer="خطأ" onclick="selectAnswer(this)">خطأ</button>
+        </div>
+    </div>
+
+    <div class="question" data-correct="صواب">
+        <h3>٣- كلمة «في» حرف.</h3>
+        <div class="options">
+            <button data-answer="صواب" onclick="selectAnswer(this)">صواب</button>
+            <button data-answer="خطأ" onclick="selectAnswer(this)">خطأ</button>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a href="objectives.html" class="btn secondary">السابق</a>
+        <button class="btn" onclick="finishPretest()">إنهاء الاختبار</button>
+    </div>
+
+</div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

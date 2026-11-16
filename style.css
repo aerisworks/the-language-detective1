@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    background: linear-gradient(135deg, #fbf6ff, #fff7f7, #f3fbf7);
+    color: #514b62;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    background: #e9ddf7;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 8px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto 50px;
+}
+
+.container {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #8d78951a;
+    border: 1px solid #eee7f2;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.detective {
+    font-size: 85px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: #80649d;
+}
+
+p {
+    line-height: 2;
+}
+
+.description {
+    color: #817a91;
+    font-size: 18px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 14px;
+    border: 1px solid #d8c5ee;
+    border-radius: 12px;
+    font-family: inherit;
+    text-align: right;
+}
+
+button, .btn {
+    display: inline-block;
+    border: none;
+    background: #d8c5ee;
+    color: #514b62;
+    padding: 12px 25px;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+}
+
+button:hover, .btn:hover {
+    background: #c9b0e6;
+}
+
+.secondary {
+    background: #f8e1e8;
+}
+
+.green {
+    background: #dff1e8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 18px;
+    background: #fbf7ff;
+    text-align: center;
+    border: 1px solid #eee7f2;
+}
+
+.card:nth-child(even) {
+    background: #fff7f9;
+}
+
+.card .icon {
+    font-size: 38px;
+}
+
+.example {
+    background: #fff5d9;
+    padding: 18px;
+    border-radius: 15px;
+    margin: 18px 0;
+}
+
+.question {
+    background: #fbf8ff;
+    border: 1px solid #eee7f2;
+    border-radius: 17px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.options button {
+    background: #eee6f7;
+}
+
+.options button.selected {
+    background: #cdb5e8;
+    outline: 2px solid #9675b7;
+}
+
+.feedback {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.correct {
+    display: block;
+    background: #e2f4e9;
+    color: #367a59;
+}
+
+.wrong {
+    display: block;
+    background: #fff0f1;
+    color: #a94f61;
+}
+
+.scene {
+    text-align: center;
+    font-size: 65px;
+    background: #f7f1fc;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.sentence {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.word {
+    display: inline-block;
+    background: #fff1c9;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.progress {
+    height: 9px;
+    background: #eee7f2;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+    background: #bfa3df;
+}
+
+.result {
+    text-align: center;
+    font-size: 35px;
+    color: #80649d;
+    font-weight: bold;
+}
+
+.certificate {
+    text-align: center;
+    border: 6px double #d8c5ee;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    color: #968da1;
+    padding: 20px;
+}
+
+@media(max-width:600px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+}
+
+@media print {
+    header, footer, .navigation, .no-print {
+        display: none;
+        @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+    }
+}

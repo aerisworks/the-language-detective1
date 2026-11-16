@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>النشاط الثاني</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header><div class="logo">🕵️ المحقق اللغوي</div></header>
+
+<main>
+<div class="container">
+
+    <h1>النشاط الثاني: اكتشف الاسم</h1>
+
+    <div class="scene">🦋🌸</div>
+
+    <p class="sentence">
+        تجري <span class="word">الفراشة</span> بين الأزهار.
+    </p>
+
+    <div class="question" data-correct="اسم"
+         data-retry="حاول مرة أخرى، هل الكلمة اسم لكائن؟">
+
+        <h3>ما نوع كلمة «الفراشة»؟</h3>
+
+        <div class="options">
+            <button data-answer="اسم" onclick="selectAnswer(this)">اسم</button>
+            <button data-answer="فعل" onclick="selectAnswer(this)">فعل</button>
+            <button data-answer="حرف" onclick="selectAnswer(this)">حرف</button>
+        </div>
+
+        <div class="feedback"></div>
+
+        <button onclick="checkAnswer(this)">تحقق من الإجابة</button>
+
+    </div>
+
+    <div class="navigation">
+        <a href="activity1.html" class="btn secondary">السابق</a>
+        <a href="activity3.html" class="btn" id="nextButton" style="pointer-events:none;opacity:.5">
+            النشاط التالي
+        </a>
+    </div>
+
+</div>
+</main>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let question = document.querySelector(".question");
+    let next = document.getElementById("nextButton");
+
+    let observer = new MutationObserver(function () {
+        if (question.dataset.solved === "yes") {
+            next.style.pointerEvents = "auto";
+            next.style.opacity = "1";
+        }
+    });
+
+    observer.observe(question, {
+        attributes: true,
+        attributeFilter: ["data-solved"]
+    });
+});
+</script>
+
+</body>
+</html>
